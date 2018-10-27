@@ -1,35 +1,46 @@
 import React, { Component } from 'react'
-import './slide-box.scss'
+import SlideBoxStyle from './slide-box.scss'
+import PropTypes from 'prop-types'
 
 const BannerList = (props) => {
-    const BannerItems = props.banners.map((item, index)=>(
-        <li key={index} className={`banner-item ${index===props.active?'active':''}`}>
+    const BannerItems = props.banners.map((item, index) => (
+        <li key={index} className={`${SlideBoxStyle['banner-item']} ${index === props.active ? SlideBoxStyle.active : ''}`}>
             <img src={item} />
         </li>
     ))
-    return <ul className="banner-list">{BannerItems}</ul>
+    return <ul className={SlideBoxStyle['banner-list']}>{BannerItems}</ul>
 }
 
 const PianoList = (props) => {
-    const PianoItems = props.thumbs.map((item, index)=>(
-        <li 
+    const PianoItems = props.thumbs.map((item, index) => (
+        <li
             order={index}
             key={index}
             onMouseOver={props.onMouseOver}
             onMouseOut={props.onMouseOut}
-            className={`piano-item ${index===props.active?'active':''}`}>
+            className={`${SlideBoxStyle['piano-item']} ${index === props.active ? SlideBoxStyle.active : ''}`}>
             <img src={item} />
         </li>
     ))
-    return <ul className="piano-list">{PianoItems}</ul>
-    
+    return <ul className={SlideBoxStyle['piano-list']}>{PianoItems}</ul>
+
 }
 export default class SlideBox extends Component {
+    static defaultProps = {
+        duration: 3000,
+        fallback: 'https://i.loli.net/2018/10/26/5bd32a969e95e.png'
+    }
+    static propTypes = {
+        duration: PropTypes.number,
+        banners: PropTypes.arrayOf(PropTypes.string).isRequired,
+        thumbs: PropTypes.arrayOf(PropTypes.string).isRequired,
+        fallback: PropTypes.string
+    }
     state = {
         active: 0,
         disableTimeUpdate: true
     }
-    constructor(props) {
+    constructor (props) {
         super(props)
         this.container = React.createRef()
     }
@@ -38,7 +49,7 @@ export default class SlideBox extends Component {
             clearInterval(this.timerID)
         }
         else {
-            this.setActive((this.state.active+1)%5)
+            this.setActive((this.state.active + 1) % 5)
         }
     }
     handleMouseOut = () => {
@@ -72,12 +83,12 @@ export default class SlideBox extends Component {
     }
     render = () => {
         return (
-            <div className="slide-box" ref={this.container}>
-                <div className="slide">
-                    <BannerList 
+            <div className={SlideBoxStyle['slide-box']} ref={this.container}>
+                <div className={SlideBoxStyle.slide}>
+                    <BannerList
                         active={this.state.active}
                         banners={this.props.banners} />
-                    <PianoList 
+                    <PianoList
                         active={this.state.active}
                         thumbs={this.props.thumbs}
                         onMouseOver={this.handleMouseOver}
