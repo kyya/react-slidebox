@@ -1,9 +1,9 @@
 {
     "name": "react-slidebox",
-    "version": "0.1.1-alpha",
+    "version": "0.2.0",
     "description": "Another React Slidebox",
-    "main": "./dist/slide-box.min.js",
-    "style": "./dist/slide-box.min.css",
+    "main": "./dist/react-slidebox.js",
+    "style": "./dist/react-slidebox.css",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/anapopo/react-slidebox.git"
@@ -16,7 +16,6 @@
     ],
     "private": false,
     "scripts": {
-        "lib": "cd lib/react-slidebox && yarn build",
         "build": "webpack",
         "lint": "eslint src"
     },
