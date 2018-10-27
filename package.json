@@ -1,19 +1,9 @@
 {
-    "name": "react-slidebox",
-    "version": "0.1.1-alpha",
-    "description": "Another React Slidebox",
-    "main": "./dist/slide-box.min.js",
-    "style": "./dist/slide-box.min.css",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/anapopo/react-slidebox.git"
-    },
+    "name": "react-slidebox-test",
+    "version": "0.0.1",
+    "description": "React Slidebox Test Project",
     "author": "Anapopo <favoursmoe@gmail.com>",
     "license": "MIT",
-    "keywords": [
-        "react",
-        "slidebox"
-    ],
     "private": false,
     "scripts": {
         "lib": "cd lib/react-slidebox && yarn build",
