@@ -19,6 +19,7 @@ yarn add react-slidebox
 ## Use
 ```javascript
 // For ES6
+import 'react-slidebox/dist/react-slidebox.css'
 import ReactSlideBox from 'react-slidebox'
 
 //Then use <ReactSlideBox {...props} /> like Other React Component
