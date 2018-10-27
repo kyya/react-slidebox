@@ -15,7 +15,11 @@ module.exports = {
     output: {
         filename: '[name].min.js',
         path: path.resolve(__dirname, "lib"),
-        libraryTarget: 'umd'
+        library: 'SlideBox',
+        libraryTarget: 'umd',
+        libraryExport: 'default',
+        umdNamedDefine: true,
+        publicPath: '/'
     },
 
     module: {
