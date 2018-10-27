@@ -5,6 +5,7 @@ import 'react-slidebox/lib/slide-box.min.css'
 import SlideBox from 'react-slidebox'
 
 const props = {
+    duration: 2000,
     banners: [
         'https://i.loli.net/2018/10/26/5bd3109e4e7f9.jpg',
         'https://i.loli.net/2018/10/26/5bd3109f390aa.jpg',
