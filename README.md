@@ -5,6 +5,7 @@
 [![npm](https://img.shields.io/npm/l/react-slidebox.svg?style=flat-square)](https://github.com/anapopo/react-slidebox/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/dt/react-slidebox.svg?style=flat-square)](https://www.npmjs.com/package/react-slidebox)
 
+React Slide Box [@Demos](https://anapopo.github.io/react-slidebox/)
 
 ## Install
 + use npm
