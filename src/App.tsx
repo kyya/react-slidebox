@@ -1,7 +1,6 @@
-import React from 'react'
-import ReactSlideBox from 'react-slidebox'
+import ReactSlideBox, { type SlideBoxProps } from 'react-slidebox'
 
-const sliderProps = {
+const sliderProps: SlideBoxProps = {
     duration: 2000,
     banners: [
         'https://i.loli.net/2018/10/26/5bd3109e4e7f9.jpg',
@@ -19,7 +18,7 @@ const sliderProps = {
     ]
 }
 
-const App = () => (
+const App = (): JSX.Element => (
     <div className="min-h-screen bg-slate-900 flex items-center justify-center p-6">
         <div className="w-full max-w-6xl rounded-2xl border border-slate-700/60 bg-slate-800/60 p-8 shadow-2xl backdrop-blur">
             <h1 className="mb-6 text-center text-3xl font-semibold tracking-tight text-slate-100">
